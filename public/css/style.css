@@ -1,0 +1,87 @@
+body {
+  padding-top: 55px;
+  padding-bottom:55px;
+}
+
+ul.form-error {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+ul.form-error li {
+	color:#d9534f;
+}
+
+.centered {
+	text-align:center;
+}
+
+.mealfield {
+	cursor:pointer;
+}
+
+.orderedmealfield {
+	background-color:#DFF0D8 !important;
+}
+
+.mealfieldhilighted
+{
+	background-color:#DFF0D8 !important;
+}
+
+.orderedmealfield.orderedmealfieldhilighted
+{
+	background-color:#f2dede !important;
+}
+
+td.mealfield.mealfieldhovered
+{
+	background-color:#d9edf7 !important;
+}
+
+
+.btn-success{
+	background: #ff0000;
+	border-color: #ff0000;
+}
+
+.navbar-custom,
+.navbar-inverse{
+    background-color:#ff0000;
+    border-color:#ff0000;
+}
+
+.navbar-custom a{
+    color: white !important;
+}
+
+/* Dropdown menu background color*/
+
+.navbar-nav > li > .dropdown-menu {     background-color: #ff0000;  }
+
+/* Dropdown menu font color*/
+
+ .navbar-nav > li > .dropdown-menu a{   color: #FFFFFF;  }
+
+ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
+  color: red;
+  background-color: #ff0000;
+}
+
+.dropdown-menu,
+ul.nav.navbar-nav .dropdown.open .dropdown-toggle,
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus,{
+	border-color: #ff0000;
+	background-color: #ff0000;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+		background: #ff0000;
+		border-color: #ff0000;
+}
+
+.pagination > li > a, .pagination > li > span,
+.pagination > li:first-child > a, .pagination > li:first-child > span{
+	color: #ff0000;
+}
