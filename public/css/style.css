@@ -22,34 +22,34 @@ ul.form-error li {
 }
 
 .orderedmealfield {
-	background-color:#DFF0D8 !important;
+	background-color:#FF0000 !important;
 }
 
 .mealfieldhilighted
 {
-	background-color:#DFF0D8 !important;
+	background-color:#FF0000 !important;
 }
 
 .orderedmealfield.orderedmealfieldhilighted
 {
-	background-color:#f2dede !important;
+	background-color:#FF0000 !important;
 }
 
 td.mealfield.mealfieldhovered
 {
-	background-color:#d9edf7 !important;
+	background-color:#FF0000 !important;
 }
 
 
 .btn-success{
-	background: #ff0000;
-	border-color: #ff0000;
+	background: #000000;
+	border-color: #000000;
 }
 
 .navbar-custom,
 .navbar-inverse{
-    background-color:#ff0000;
-    border-color:#ff0000;
+    background-color:#000000;
+    border-color:#000000;
 }
 
 .navbar-custom a{
@@ -58,30 +58,30 @@ td.mealfield.mealfieldhovered
 
 /* Dropdown menu background color*/
 
-.navbar-nav > li > .dropdown-menu {     background-color: #ff0000;  }
+.navbar-nav > li > .dropdown-menu {     background-color: #000000;  }
 
 /* Dropdown menu font color*/
 
- .navbar-nav > li > .dropdown-menu a{   color: #FFFFFF;  }
+ .navbar-nav > li > .dropdown-menu a{   color: #000000;  }
 
 ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
   color: red;
-  background-color: #ff0000;
+  background-color: #000000;
 }
 
 .dropdown-menu,
 ul.nav.navbar-nav .dropdown.open .dropdown-toggle,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus,{
-	border-color: #ff0000;
-	background-color: #ff0000;
+	border-color: #000000;
+	background-color: #000000;
 }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-		background: #ff0000;
-		border-color: #ff0000;
+		background: #000000;
+		border-color: #000000;
 }
 
 .pagination > li > a, .pagination > li > span,
 .pagination > li:first-child > a, .pagination > li:first-child > span{
-	color: #ff0000;
+	color: #000000;
 }
