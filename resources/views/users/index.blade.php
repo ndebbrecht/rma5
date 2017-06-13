@@ -30,7 +30,13 @@
 		        	<td>{!! date("d.m.Y", strtotime($user->birthdate)) !!}</td>
 		        	<td>@foreach($user->grades as $grade)
 		        			{!! $grade->course->title !!}: {!! $grade->grade !!}<br/>
-		        		@endforeach</td>
+		        		@endforeach
+								@if ($user->getAverageGrade())
+								{!! $user->getAverageGrade()!!}
+							@else
+									Keine Noten vergeben
+								@endif
+							</td>
 		        	<td><div class="btn-group">{!! Html::link('/users/addgrade/'.$user->id, 'Note hinzufügen', array('class'=>'btn btn-success')) !!}</div></td>
 		        	<td><div class="btn-group">{!! Html::link('/users/edit/'.$user->id, 'Bearbeiten', array('class'=>'btn btn-success')) !!}</div></td>
 		        	<td><div class="btn-group">{!! Html::link('/users/delete/'.$user->id, 'Löschen', array('class'=>'btn btn-success', 'onClick'=>'return confirm(\'Wirklich löschen?\');')) !!}</div></td>
@@ -43,7 +49,7 @@
 	{!! $users->render() !!}
 	<br/>
 
-	
+
 
 	{!! Html::link('users/new', 'Hinzufügen', array('class' => 'btn btn-success'))!!}
 	{!! Html::link('#', 'Zurück', array('class' => 'btn btn-success', 'onClick="javascript:history.back();return false;"'))!!}

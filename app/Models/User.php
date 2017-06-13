@@ -61,7 +61,7 @@ class User extends Model {
 //Berechnung der Durchschnittsnote
     public function getAverageGrade()
     {
-    	$gradeSum = 0.;
+    	/*$gradeSum = 0.;
     	$gradeCount = count($this->grades);
     	foreach($this->grades as $grade)
     	{
@@ -76,7 +76,12 @@ class User extends Model {
     		$gradeSum = null;
     	}
     	$gradeSum=round($gradeSum, 1);
-    	return $gradeSum;
+    	return $gradeSum;*/
+			if (count($this->grades) >0)
+			{
+					return $this->grades()->avg('grade');
+			}
+			return null;
     }
 
 }
