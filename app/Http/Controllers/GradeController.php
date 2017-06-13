@@ -106,7 +106,7 @@ class GradeController extends Controller {
     public function getDelete($id)
     {
         $grade = Grade::find($id);
-        $grade->deleteCascade();
+        $grade->delete();
         return redirect('grades/index')->with('message', 'success|Note wurde erfolgreich gelöscht!');
     }
 
