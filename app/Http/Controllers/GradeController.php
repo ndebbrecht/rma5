@@ -32,13 +32,13 @@ class GradeController extends Controller {
     	$grade = new Grade();
         $courseArray = Course::orderBy('title', 'asc')->get();
         $courses = array('0' => '--- bitte wählen ---');
-        foreach ($courseArray as $course) 
+        foreach ($courseArray as $course)
         {
             $courses[$course->id] = $course->title;
         }
         $userArray = User::orderBy('lastname', 'asc')->get();
         $users = array('0' => '--- bitte wählen ---');
-        foreach ($userArray as $user) 
+        foreach ($userArray as $user)
         {
             $users[$user->id] = $user->lastname.','.$user->firstname;
         }
@@ -49,8 +49,8 @@ class GradeController extends Controller {
     public function postNew()
     {
 		$validator = Validator::make(Request::all(), Grade::$rules);
- 
-    	if ($validator->passes()) 
+
+    	if ($validator->passes())
     	{
         	//erfolgreiche Anlegung
         	$grade = new Grade;
@@ -58,12 +58,12 @@ class GradeController extends Controller {
 		    $grade->grade = Request::input('grade');
 		    $grade->course_id = Request::input('course_id');
 		    $grade->save();
-		 
+
 		    return redirect('grades')->with('message', 'success|Note erfolgreich hinterlegt!');
-    	} 
-    	else 
+    	}
+    	else
     	{
-        	//Fehlermeldung  
+        	//Fehlermeldung
         	return redirect('grades/new')->with('message', 'danger|Die folgenden Fehler sind aufgetreten:')->withErrors($validator)->withInput();
     	}
     }
@@ -77,18 +77,18 @@ class GradeController extends Controller {
         $rules['grade'] = '';
         $rules['course_id'] = '';
         $validator = Validator::make(Request::all(), $rules);
- 
-        if ($validator->passes()) 
+
+        if ($validator->passes())
         {
-            //Änderung erfolgreich            
+            //Änderung erfolgreich
             $grade->user_id = Request::input('user_id');
 		    $grade->grade = Request::input('grade');
 		    $grade->course_id = Request::input('course_id');
             $grade->save();
-         
+
             return redirect('grades/index')->with('message', 'success|Note erfolgreich gespeichert!');
-        } 
-        else 
+        }
+        else
         {
             //Fehlermeldung
             return redirect('grades/edit/'.$grade->id)->with('message', 'danger|Die folgenden Fehler sind aufgetreten:')->withErrors($validator)->withInput();
@@ -114,9 +114,8 @@ class GradeController extends Controller {
  public function getShow($id=0)
     {
         $grade = Grade::find($id);
-       
+
         return view('grades.show')->with('grade', $grade);
     }
 
 }
-  
